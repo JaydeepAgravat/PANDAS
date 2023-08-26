@@ -27,6 +27,11 @@
 - Filtering a DataFrame
 - Adding new cols
 
+## 3. Method
+
+- Series methods
+- DataFrame methods
+
 ```python
 ds = pd.Series(data=,index=,name=)
 ds = pd.read_csv(,index_col=)
