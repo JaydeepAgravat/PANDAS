@@ -27,7 +27,7 @@
 - Filtering a DataFrame
 - Adding new cols
 
-## 3. Method
+## 3. Methods
 
 - Series methods
 - DataFrame methods
@@ -115,4 +115,50 @@ df.loc[]
 df['newc'] = 'val'
 
 df.dropna(inplace=True)
+```
+```python
+# Series
+
+ds.astype(dtype=)
+ds.value_counts()
+ds.sort_values(ascending=)
+ds.rank(ascending=)
+ds.sort_index(ascending=)
+ds.reset_index(inplace=)
+ds.unique()
+ds.nunique()
+ds.isnull()
+ds.notnull()
+ds.hasnans
+ds.dropna(how='any')
+ds.fillna(value=, method='bfill', inplace=)
+ds.drop_duplicates(keep='first')
+ds.drop(index=[], inplace=)
+ds.apply(func)
+ds.isin(values=[])
+ds.corr(other=)
+ds.nlargest(n=5, keep='last')
+ds.nsmallest(n=5)
+
+# DataFrame
+df.value_counts()
+df.sort_values(['ds1','ds2'], ascending=[True, False], na_position='first', inplace=)
+df.sort_index(ascending=)
+df.set_index('ds', inplace=)
+df.reset_index(inplace=)
+df.rename(columns={"oldc":"newc"}, inplace=)
+df.rename(index={"oldv":"newv"}, inplace=)
+df.isnull()
+df.notnull()
+df.dropna(subset=[], how='all')
+df.fillna()
+df.drop_duplicates(subset=[], keep='last')
+df.drop(index=[], columns=[], inplace=)
+df.drop(labels=[], axis=1, inplace=)
+df.apply(func=, axis=)
+df.isin(values=[])
+df.corr(numeric_only=True)
+df.nlargest(n=5, columns=[], keep='first')
+df.nsmallest(n=5, columns=[], keep='all')
+df.insert(loc=, columns, value=ds)
 ```
