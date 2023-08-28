@@ -43,6 +43,15 @@
 - groupby on multiple cols
 - agg on multiple groupby
 
+## 5. Merging
+
+- concat
+- merge
+- inner join
+- left join
+- right join
+- outer join
+
 ```python
 ds = pd.Series(data=,index=,name=)
 ds = pd.read_csv(,index_col=)
@@ -192,4 +201,12 @@ gbo.agg([])
 gbo.apply()
 for _,data in gbo:
   pass
+```
+
+```python
+pd.concat([df1, df2], ignore_index=False, keys=[], axis=0)
+pd.merge(df1, df2)
+
+df1.merge(df2, how='', on='')
+df1.merge(df2, how='', left_on='', right_on='')
 ```
