@@ -32,6 +32,17 @@
 - Series methods
 - DataFrame methods
 
+## 4. Groupby
+
+- groupby
+- Applying builtin aggregation method on groupby objects
+- GroupBy Attributes and Methods
+- Aggregation method: dict & list
+- Looping on groups
+- apply
+- groupby on multiple cols
+- agg on multiple groupby
+
 ```python
 ds = pd.Series(data=,index=,name=)
 ds = pd.read_csv(,index_col=)
@@ -161,4 +172,24 @@ df.corr(numeric_only=True)
 df.nlargest(n=5, columns=[], keep='first')
 df.nsmallest(n=5, columns=[], keep='all')
 df.insert(loc=, columns, value=ds)
+```
+
+```python
+gbo.groups
+len(gbo)
+gbo.size()
+gbo.max()
+gbo.count()
+gbo.describe()
+dbo.sample()
+gbo.first()
+gbo.last()
+gbo.nth()
+gbo.get_group()
+gbo.nunique()
+gbo.agg({})
+gbo.agg([])
+gbo.apply()
+for _,data in gbo:
+  pass
 ```
